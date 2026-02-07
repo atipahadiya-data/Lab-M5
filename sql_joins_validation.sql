@@ -256,7 +256,7 @@ INNER JOIN order_items oi ON o.order_id = oi.order_id;
 -- Validate revenue consistency
 SELECT 
   SUM(oi.quantity * oi.price) AS total_revenue
-FROM orders o
+FROM orders o 
 INNER JOIN customers c ON o.customer_id = c.customer_id
 INNER JOIN order_items oi ON o.order_id = oi.order_id;
 
